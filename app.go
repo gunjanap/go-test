@@ -48,7 +48,7 @@ func (app *App) NewUnitOfWork(readOnly bool) *repository.UnitOfWork {
 
 //Initialize initializes properties of the app
 func (app *App) Initialize(routeSpecifiers []RouteSpecifier) {
-	fmt.Println("--------- LOCAL MICROAPP -------------")
+	fmt.Println("----------- LOCAL MICROAPP -------------")
 	app.Router = mux.NewRouter()
 	app.Router.Use(mux.CORSMethodMiddleware(app.Router))
 	app.Router.Use(app.loggingMiddleware)
